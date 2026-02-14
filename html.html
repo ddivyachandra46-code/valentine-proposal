@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Valentine Proposal</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff4e50, #ef3afc);
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 0, 0);
+    transform: rotate(45deg);
+    animation: float 8s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: -10px;
+    top: 0;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(45deg); opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(45deg); opacity: 0; }
+}
+
+
+.container {
+    position: relative;
+    top: 15vh;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3rem;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 25px pink, 0 0 35px red; }
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+
+button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4e50;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: pink;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+.image-box {
+    margin-top: 20px;
+}
+
+.image-box img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+
+    <div class="heart" style="left:10%; animation-delay:0s;"></div>
+<div class="heart" style="left:25%; animation-delay:2s;"></div>
+<div class="heart" style="left:50%; animation-delay:4s;"></div>
+<div class="heart" style="left:70%; animation-delay:1s;"></div>
+<div class="heart" style="left:85%; animation-delay:3s;"></div>
+
+<div class="container">
+    <h1>Will You Be My Valentine? 💖</h1>
+    <p>You are the most beautiful part of my life.<br>
+       I can't imagine my world without you.</p>
+
+   
+       <div class="image-box">
+
+        <img src="img1.jpeg" alt="Our Beautiful Memory">
+        <img src="img2.jpeg" alt="Our Memorable Day">
+
+        <p> These are the best memories i have stored in my heart.💞✨
+            
+        </p>
+    </div>
+
+   <br><br>
+
+<button onclick="sayYes()">Yes, I Will ❤️</button>
+<button onclick="sayNo()">No, I Wont 🥺</button>
+
+<script>
+function sayYes() {
+    alert("Yay! You just made me the happiest person alive! ❤️😍");
+}
+
+function sayNo() {
+    alert("Sorry for bothering you, but I can leave you still... I LOVE YOU! 🥺💖");
+}
+</script>
+
+
+</body>
+</html>
